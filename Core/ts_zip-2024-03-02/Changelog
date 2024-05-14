@@ -1,0 +1,10 @@
+2024-03-02:
+
+- RWKV 169M v4 is provided as the default model
+- large speed improvement (up to 1MB/s on RTX 4090)
+- a compressed file can now be decompressed on a different GPU or CPU
+- new block based file format (default block size = 50MB)
+
+2023-08-07:
+
+- initial release
