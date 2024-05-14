@@ -7,16 +7,14 @@ Open Source Core Libraries for Bellard AI wearable
 <img src = "https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMurageKibicho%2FBellard%2F&label=Visitors&countColor=%23263759"
  alt="Visitor Count" />
   <br>
-<img src="https://img.shields.io/github/stars/Fileforma" alt="GitHub stars"/>
-
 </a>
 
-**Location + Compression proxy** in `you can carry around`
+**Location + Compression proxy** `you can carry around`
 
-Receive [project updates](https://antipythonai.substack.com/)
+Receive [project updates](https://bellard.substack.com/)
 
 
-<img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1706581854/Virtual_Assistant_Promotion_of_Services_Facebook_Cover_Photo_kxqr4d.png" alt="Banner"/>
+<img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1715710864/Antipython_Promos_m4hzec.png" alt="Banner"/>
 
 </div>
 
