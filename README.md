@@ -24,6 +24,7 @@ Receive [project updates](https://bellard.substack.com/)
 Bellard Proxy is an AI wearable let's you **carry your proxies wherever and whenever**!
 
 It's named after Fabrice Bellard, the inventor of FFmpeg and ts_zip - a ZIP utility that incorporates LLMs for smaller file sizes.
+
 Bellard bundles into one device
 
 ✔ Geo proxies - Hide your physical location from Facebook, governments and IP trackers when browsing the internet.
