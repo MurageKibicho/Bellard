@@ -1,0 +1,306 @@
+ *{
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Raleway;
+    --primary-font-color: #427831;
+    --primary-details-color: #f3f3f3;
+  }
+  body
+  {
+    height:100vh;
+    width: 100vw;
+    display : flex;
+  }
+  .InvoiceNumberArea {
+    height: 100%;
+    width: 13.3%;
+  }
+  .InvoiceContentArea {
+    height: 100%;
+    width: 73.3%;
+  }
+  
+  #InvoiceHeader
+  {
+    margin-top: 5%;
+    width: 100%;
+    height: 35%;
+    display: flex;
+  }
+  #InvoiceHeaderLeft
+  {
+    width: 70%;
+    height: 100%;
+  }
+  #InvoiceHeaderRight
+  {
+    width: 30%;
+    height: 100%;
+    position: relative;
+  }
+  #LogoImage
+  {
+    height: 65%;
+    margin-left: -20px;
+  }
+  #InvoiceDates
+  {
+    height: 35%;
+    width: 100%;
+    font-size: 0.9em;
+  }
+  #CreationDate
+  {
+    width: 100%;
+    height: 50%;
+  }
+  #DueDate
+  {
+    width: 100%;
+    height: 50%;
+  }
+  .EmptyBlockContent
+  {
+    height: 100%;
+    width: 13.3%;
+  }
+  
+  #DocumentTitle
+  {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: var(--primary-font-color);
+  }
+
+  #Location
+  {
+    height:fit-content;
+    font-size: 1em;
+    margin-bottom: 5px;
+
+  }
+
+  #email
+  {
+    height:fit-content;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  #PhoneNumber
+  {
+    height:fit-content;
+    font-size: 1em;
+  }
+
+  #BillTo
+  {
+    color: var(--primary-font-color);
+    margin-top: 50px;
+  }
+
+  #BillDivider
+  {
+    height: 2px;
+    width: 75px;
+    background-color: grey;
+    margin-top: 2px;
+    margin-bottom: 5px;
+
+  }
+  #HouseNumber
+  {
+    margin-top: 10px;
+  }
+  #BillPhoneNumber
+  {
+    margin-top: 10px;
+  }
+
+  #InvoiceBillingSection
+  {
+    height: 20%;
+    width: 98%;
+    display: block;
+    border: solid 2px;
+    border-color: black;
+    margin-top: 5px;
+    margin-right: 2%;
+  }
+  #InvoiceBillingTitleSection
+  {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    border-bottom: solid 1px gray;
+    font-weight: 800;
+    display: flex;
+  }
+
+  #InvoiceDescription
+  {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    background-color: var(--primary-font-color);
+    border-right: solid 1px gray;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #InvoiceTotal
+  {
+    display: flex;
+    background-color: var(--primary-font-color);
+    width: 30%;
+    height: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #InvoiceBillingDetailSection
+  {
+    width: 100%;
+    height: 75%;
+    background-color: var(--primary-details-color);
+    color: black;
+  }
+
+  .IndividualBill
+  {
+    width: 100%;
+    height: 19.5%;
+    border-bottom: solid 1px grey;
+    display: flex;
+    background-color: var(--primary-details-color);
+  }
+  .BillDescription
+  {
+    height: 100%;
+    width: 70%;
+    background-color: var(--primary-details-color);
+    border-right: solid 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .BillTotal
+  {
+    height: 100%;
+    width: 30%;
+    background-color: var(--primary-details-color);
+    border-right: solid 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #InvoiceBankSection
+  {
+    width: 98%;
+    height: 20%;
+    margin-top: 5px;
+    margin-right: 2%;
+    display: flex;
+  }
+  
+  #BankDetails
+  {
+    padding-top: 5%;
+    height: 100%;
+    width: 50%;
+  }
+
+  #BankDetailsText
+  {
+    height: 100%;
+    width: 50%;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+ 
+  .SubtotalSection0
+  {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 50px;
+  }
+  .SubtotalSection1
+  {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1px;
+  }
+  
+  #SubtotalText
+  {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .SubtotalNumber
+  {
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px grey;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #SubtotalTextDue
+  {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: var(--primary-font-color);
+    font-size: 1.2em;
+
+  }
+  #SubtotalNumberDue
+  {
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 2px black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--primary-details-color);
+    font-size: 1.2em;
+  }
+
+  
+  #MpesaTitle
+  {
+    margin-top: 40px;
+    color: var(--primary-font-color);
+    font-size: 1.0em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  #MpesaDetails
+  {
+    display: block;
+  }

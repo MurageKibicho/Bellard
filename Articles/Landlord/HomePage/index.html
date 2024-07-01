@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Document</title>
+      <!--CSS Imports-->
+      <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--HTMX CDN Script-->
+    <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+
+    
+</head>
+<body>
+    <body>
+        <div class="InvoiceNumberArea" id = "LeftEmptySide"></div>
+        <div class ="InvoiceContentArea">
+            <div id="InvoiceHeader">
+                <div id="InvoiceHeaderLeft">
+
+                    <div id = "DocumentTitle" hx-get="http://localhost:8000/api/companyName" hx-target="#DocumentTitle"  hx-trigger="load" hx-swap="innerText"> Company Name</div>
+                    <div id = "Location" hx-get="http://localhost:8000/api/location" hx-target="#Location" hx-trigger="load delay:1s" hx-swap="innerText"> Street name, Location, County </div>
+                    <div id = "email" > murage.kibicho@email.com </div>
+                    <div id = "PhoneNumber"> +254 1000000000 </div>
+                    <div id = "BillTo"> Bill To </div>
+                    <div id = "BillDivider"> </div>
+                    <div id = "BillRecipient"> Murage Kibicho </div>
+                    <div id = "HouseNumber">House 5</div>
+                    <div id = "BillPhoneNumber">+254 757012297 </div>
+
+                </div>
+                <div id="InvoiceHeaderRight">
+                    <img id = "LogoImage"src="http://localhost:8000/api/logo" alt="Logo" />
+                    <div id="InvoiceDates">
+                        <div id="CreationDate" ><b>Invoice Date: </b id="tenantInvoiceDate" >30/6/24</div>
+                        <div id="DueDate"><b id="tenantDueDate" >Due Date: </b>30/6/24</div>
+                    </div>
+                </div>
+            </div>
+            <div id="InvoiceBillingSection">
+                <div id="InvoiceBillingTitleSection">
+                    <div id="InvoiceDescription">Description </div>
+                    <div id="InvoiceTotal">Total </div>
+                </div>
+                <div id="InvoiceBillingDetailSection">
+                    <div class="IndividualBill"><div class="BillDescription">Rent</div><div class="BillTotal" id = "tenantRent" >100,000.00</div></div>
+                    <div class="IndividualBill"><div class="BillDescription">Service Charge</div><div class="BillTotal" id = "tenantServiceCharge">100,000.00</div></div>
+                    <div class="IndividualBill"><div class="BillDescription">Water</div><div class="BillTotal" id = "tenantWaterBill">100,000.00</div></div>
+                    <div class="IndividualBill"><div class="BillDescription"></div><div class="BillTotal">0.00</div></div>
+                    <div class="IndividualBill"><div class="BillDescription"></div><div class="BillTotal">0.00</div></div>
+                </div>
+            </div>
+            <div id="InvoiceBankSection">
+                <div id="BankDetails">
+                        BANK : <b>EQUITY BANK</b>
+                        <br>
+                        BRANCH : <b id = "BankBranch" >KILIMANI</b>
+                        <br>
+                        ACCOUNT NO : <b id = "BankAccountNumber0">0000000000 </b> 
+                        <br>
+                        ACCOUNT NAME: <b id = "BankAccountName" hx-get="http://localhost:8000/api/bankAccountName" hx-target="#BankAccountName" hx-trigger="load delay:2s" hx-swap="innerText">MURAGE KIBICHO</b>  
+                </div>
+                <div id="BankDetailsText">
+                    <div class = "SubtotalSection0"> <div id="SubtotalText">SUBTOTAL</div>          <div class="SubtotalNumber" id = "tenantSubtotal" >108,300</div> </div>
+                    <div class = "SubtotalSection1"> <div id="SubtotalText">SUBTOTAL LESS TAX</div> <div class="SubtotalNumber" id = "tenantSubtotalBeforeTax" >97,500</div> </div>
+                    <div class = "SubtotalSection1"> <div id="SubtotalText">TAX RATE</div>          <div class="SubtotalNumber" id = "tenantTaxRate" >7.50%</div> </div>
+                    <div class = "SubtotalSection1"> <div id="SubtotalText">TOTAL TAX</div>         <div class="SubtotalNumber" id = "tenantTotalTax" >7,500</div> </div>
+                    <div class = "SubtotalSection1"> <div id="SubtotalTextDue">BALANCE DUE <br> (Kenyan Shillings)</div> <div id="SubtotalNumberDue">7,500</div> </div>
+
+                </div>
+            </div>
+            <div id="MpesaDiv">
+                <div id="MpesaTitle">M-PESA INSTRUCTIONS</div>
+                <div id="MpesaDetails">
+                    Paybill : <b>247247</b>
+                    <br>
+                    Account : <b id = "BankAccountNumber1" >0000000000 </b>
+                </div>
+            </div>
+        </div>
+        <div class ="EmptyBlockContent" id = "RightEmptySide">
+        </div>
+      </body>
+</body>
+<script>
+    document.getElementById('LeftEmptySide').addEventListener('click', () => {
+        fetch('http://localhost:8000/api/getAllLandlordDetails')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('BankAccountName').innerText = `${data.landlordName}`;
+                document.getElementById('PhoneNumber').innerText = `${data.landlordPhoneNumber}`;
+                document.getElementById('email').innerText = `${data.landlordEmail}`;
+                document.getElementById('DocumentTitle').innerText = `${data.landlordCompany}`;
+                document.getElementById('BankBranch').innerText = `${data.landlordBankLocation}`;
+                document.getElementById('BankAccountNumber0').innerText = `${data.landlordBankAccountNumber}`;
+                document.getElementById('BankAccountNumber1').innerText = `${data.landlordBankAccountNumber}`;
+                document.getElementById('Location').innerText = `${data.companyLocation}`;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
+</script>
+<script>
+    document.getElementById('RightEmptySide').addEventListener('click', () => {
+        fetch('http://localhost:8000/api/getAllTenantDetails')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('BillRecipient').innerText = `${data.tenantName}`;
+                document.getElementById('HouseNumber').innerText = `${data.tenantHouseNumber}`;
+                document.getElementById('BillPhoneNumber').innerText = `${data.tenantPhoneNumber}`;
+                document.getElementById('tenantInvoiceDate').innerText = `${data.tenantInvoiceDate}`;
+                document.getElementById('tenantDueDate').innerText = `${data.tenantDueDate}`;
+                document.getElementById('tenantRent').innerText = `${data.tenantRent}`;
+                document.getElementById('tenantServiceCharge').innerText = `${data.tenantServiceCharge}`;
+                document.getElementById('tenantWaterBill').innerText = `${data.tenantWaterBill}`;
+
+                document.getElementById('tenantSubtotal').innerText = `${data.tenantSubtotal}`;
+                document.getElementById('tenantSubtotalBeforeTax').innerText = `${data.tenantSubtotalBeforeTax}`;
+                document.getElementById('tenantTaxRate').innerText = `${data.tenantTaxRate}`;
+                document.getElementById('tenantTotalTax').innerText = `${data.tenantTotalTax}`;
+                document.getElementById('SubtotalNumberDue').innerText = `${data.tenantBalanceDue}`;
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
+</script>
+</html>
