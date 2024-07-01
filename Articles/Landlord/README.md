@@ -20,4 +20,5 @@ Here's the [full article](https://kibicho.substack.com/p/automating-my-day-job-a
 
 - This was a fun project. I learnt C and HTMX.
 Here's the [full article](https://kibicho.substack.com/p/automating-my-day-job-as-a-landlord)
+
 Please star my repo
