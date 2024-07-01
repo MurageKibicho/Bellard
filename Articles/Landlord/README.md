@@ -10,7 +10,7 @@
 
 ## ✨ Motivation
 I wanted to automate my day job as a landlord. I had lots of free time so I did it in C. 
-Here's the [full article]https://kibicho.substack.com/p/automating-my-day-job-as-a-landlord)
+Here's the [full article](https://kibicho.substack.com/p/automating-my-day-job-as-a-landlord)
 
 ## 🏗️ Deployment
 
@@ -19,5 +19,5 @@ Here's the [full article]https://kibicho.substack.com/p/automating-my-day-job-as
 3. Open the HomePage folder and open `index.html` in your browser.
 
 - This was a fun project. I learnt C and HTMX.
-Here's the [full article]https://kibicho.substack.com/p/automating-my-day-job-as-a-landlord)
+Here's the [full article](https://kibicho.substack.com/p/automating-my-day-job-as-a-landlord)
 Please star my repo
