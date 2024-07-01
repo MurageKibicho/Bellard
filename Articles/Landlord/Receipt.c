@@ -49,8 +49,8 @@ static void ServerHandler(struct mg_connection *connection, int event, void *eve
 		}
 		else if(mg_http_match_uri(hm, "/api/getAllTenantDetails"))
 		{
-			int tenantIndex  = 10;
-
+			int tenantIndex  = 1;
+			assert(tenantIndex < numberOfTenants);
 			/*create cJSON object*/
 			cJSON *tenantDetailsJSON = cJSON_CreateObject(); 
 			/*add strings to the cJSON object*/

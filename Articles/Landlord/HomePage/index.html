@@ -36,8 +36,8 @@
                 <div id="InvoiceHeaderRight">
                     <img id = "LogoImage"src="http://localhost:8000/api/logo" alt="Logo" />
                     <div id="InvoiceDates">
-                        <div id="CreationDate" ><b>Invoice Date: </b id="tenantInvoiceDate" >30/6/24</div>
-                        <div id="DueDate"><b id="tenantDueDate" >Due Date: </b>30/6/24</div>
+                        <div id="CreationDate"><b>Invoice Date: </b> <p id="tenantInvoiceDate" > 30/6/24 </p></div>
+                        <div id="DueDate"><b>Due Date: </b> <p id="tenantDueDate" > 30/6/24 </p> </div>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,6 @@
                     <div class="IndividualBill"><div class="BillDescription">Rent</div><div class="BillTotal" id = "tenantRent" >100,000.00</div></div>
                     <div class="IndividualBill"><div class="BillDescription">Service Charge</div><div class="BillTotal" id = "tenantServiceCharge">100,000.00</div></div>
                     <div class="IndividualBill"><div class="BillDescription">Water</div><div class="BillTotal" id = "tenantWaterBill">100,000.00</div></div>
-                    <div class="IndividualBill"><div class="BillDescription"></div><div class="BillTotal">0.00</div></div>
-                    <div class="IndividualBill"><div class="BillDescription"></div><div class="BillTotal">0.00</div></div>
                 </div>
             </div>
             <div id="InvoiceBankSection">
@@ -67,7 +65,7 @@
                 <div id="BankDetailsText">
                     <div class = "SubtotalSection0"> <div id="SubtotalText">SUBTOTAL</div>          <div class="SubtotalNumber" id = "tenantSubtotal" >108,300</div> </div>
                     <div class = "SubtotalSection1"> <div id="SubtotalText">SUBTOTAL LESS TAX</div> <div class="SubtotalNumber" id = "tenantSubtotalBeforeTax" >97,500</div> </div>
-                    <div class = "SubtotalSection1"> <div id="SubtotalText">TAX RATE</div>          <div class="SubtotalNumber" id = "tenantTaxRate" >7.50%</div> </div>
+                    <div class = "SubtotalSection1"> <div id="SubtotalText">KRA GROSS TAX</div>          <div class="SubtotalNumber" id = "tenantTaxRate" >7.50%</div> </div>
                     <div class = "SubtotalSection1"> <div id="SubtotalText">TOTAL TAX</div>         <div class="SubtotalNumber" id = "tenantTotalTax" >7,500</div> </div>
                     <div class = "SubtotalSection1"> <div id="SubtotalTextDue">BALANCE DUE <br> (Kenyan Shillings)</div> <div id="SubtotalNumberDue">7,500</div> </div>
 

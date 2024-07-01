@@ -39,18 +39,18 @@ Tenant tenants[] =
 		},
 		{
 			.tenantName = "John Doe",
-			.houseNumber = "1234",
-			.mobilePhoneNumber = "555-1234",
-			.invoiceDate = "2023-06-01",
-			.dueDate = "2023-06-15",
-			.rent = "1000",
-			.serviceCharge = "200",
-			.waterBill = "50",
-			.subtotal = "1250",
-			.subtotalBeforeTax = "1000",
-			.taxRate = "0.05",
-			.totalTax = "50",
-			.balanceDue = "1300"
+			.houseNumber = "House 1",
+			.mobilePhoneNumber = "+254757012296",
+			.invoiceDate = "01/07/2024",
+			.dueDate = "01/07/2024",
+			.rent = "100,000",
+			.serviceCharge = "5,000",
+			.waterBill = "5000",
+			.subtotal = "110,000",
+			.subtotalBeforeTax = "102,500",
+			.taxRate = "7.50%",
+			.totalTax = "7500",
+			.balanceDue = "110,000"
 		}
 		
 	};
