@@ -1,7 +1,7 @@
-Open Source Core Libraries for Bellard AI wearable
+Open Source Core Libraries for Bellard Pocket Wifi
 
 <div align="center">
-<h1>✨ Bellard AI Proxy Wearable</h1>
+<h1>✨ Bellard Pocket Wifi</h1>
   
 <a href="https://github.com/MurageKibicho/Bellard/" target="_blank" title="GitHub stars">
 <img src = "https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMurageKibicho%2FBellard%2F&label=Visitors&countColor=%23263759"
@@ -9,11 +9,11 @@ Open Source Core Libraries for Bellard AI wearable
   <br>
 </a>
 
-**Location + Compression proxy** `you can carry around`
+**Modem + Location + Compression proxy** `you can carry around`
 
-Receive [project updates](https://bellard.substack.com/)
+Receive [project updates](https://kibicho.substack.com/)
 
-[July 1st Preorder Link](https://buy.stripe.com/9AQ16aeWO8GAbsYdQR) 
+[November 1st Preorder Link](https://buy.stripe.com/9AQ16aeWO8GAbsYdQR) 
 
 
 <img src="https://res.cloudinary.com/dcrelr5e7/image/upload/v1715710864/Antipython_Promos_m4hzec.png" alt="Banner"/>
@@ -21,7 +21,7 @@ Receive [project updates](https://bellard.substack.com/)
 </div>
 
 ## What's this?
-Bellard Proxy is an AI wearable let's you **carry your proxies wherever and whenever**!
+Bellard Pocket Wifi is an AI carry-on that let's you **access fast wifi wherever and whenever**!
 
 It's named after Fabrice Bellard, the inventor of FFmpeg and ts_zip - a ZIP utility that incorporates LLMs for smaller file sizes.
 
@@ -38,7 +38,7 @@ Bellard bundles into one device
 We're all terminally online. Might as well optimize for security and faster internet.
 
 ### Preorder
-We start shipping July 1st. Accepting preorders 
+We start shipping November 1st. Accepting preorders 
 [Preorder Link](https://buy.stripe.com/9AQ16aeWO8GAbsYdQR) 
 
 
