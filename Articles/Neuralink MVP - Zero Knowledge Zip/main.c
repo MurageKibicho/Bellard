@@ -172,7 +172,7 @@ int main()
 	char *newDirectory = "DecodedOutput";
 	
 	
-	//system(downloadDataset);
+	system(downloadDataset);
 	system(unzipDataset);
 	
 	system(compileEncoder);
