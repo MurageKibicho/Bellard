@@ -43,22 +43,23 @@ Total saved  size:     **107084 (bytes)**
 4. Run the build script
    
    ```./main.o```
-   
-## Disclaimer
-Our encoder has a failure rate of 8 / 743.
 
-This means 8 in 743s files won't decompress correctly.
-
-I didn't have time to debug these edge cases.
-
-## Further direction
-If we get hired by Neuralink we'll spend more time working on the dataset.
-[Follow us on Twitter](https://x.com/murage_kibicho)
-   
-
-   The build script
+ The build script
    - Downloads the neuralink dataset
    - Unzips the dataset
    - Performs our [custom transform]()
    - Runs a test to compare files.
  
+   
+## Disclaimer
+Our encoder has a failure rate of 10 / 743.
+
+This means 10 in 743s files won't decompress correctly.
+
+We didn't have time to debug these edge cases.
+
+## Further direction
+[Follow us on Twitter](https://x.com/murage_kibicho)
+[Take our compression course : Using FFmpeg in C](https://www.udemy.com/course/part-1-video-coding-with-ffmpeg-and-c-in-replit-online-ide/)
+
+
