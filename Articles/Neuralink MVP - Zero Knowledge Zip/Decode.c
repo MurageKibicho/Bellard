@@ -384,7 +384,7 @@ int main()
 		if(outputFileName[strlen(outputFileName)-3] != 'o' && outputFileName[strlen(outputFileName)-2] != 'u')
 		{
 			char copyCommand[5000] = {0};
-			snprintf(outputFileName, sizeof(outputFileName), "%s/%s",storageDirectory,toEncodeFileNames[i]);
+			snprintf(outputFileName, sizeof(outputFileName), "%s/%s",storageDirectory,toDecodeFileNames[i]);
 			snprintf(copyCommand, sizeof(copyCommand), "cp %s %s",inputFileName, outputFileName);
 			system(copyCommand);
 		}

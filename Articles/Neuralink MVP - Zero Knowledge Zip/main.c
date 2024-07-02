@@ -7,6 +7,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <time.h>
 #define MAX_FILENAME_LENGTH 2056
 
 size_t GetFileSize(char *fileName)
@@ -162,7 +163,7 @@ int main()
 	/*Command to compile all Programs*/
 	char *compileEncoder = "clear && gcc Encode.c -lm -o Encode.o";
 	char *compileDecoder = "clear && gcc Decode.c -lm -o Decode.o";
-	char *compileCompare = "clear && gcc compare.c -lm -o compare.o";
+	char *compileCompare = "gcc compare.c -lm -o compare.o";
 	
 	char *runEncoder = "clear && ./Encode.o";
 	char *runDecoder = "clear && ./Decode.o";
@@ -172,7 +173,7 @@ int main()
 	char *newDirectory = "DecodedOutput";
 	
 	
-	system(downloadDataset);
+	//system(downloadDataset);
 	system(unzipDataset);
 	
 	system(compileEncoder);
@@ -181,6 +182,7 @@ int main()
 	
 	EncodeBzip();
 	system(runEncoder);
+	//sleep(1);
 	system(runDecoder);
 	DecodeBzip(newDirectory);
 

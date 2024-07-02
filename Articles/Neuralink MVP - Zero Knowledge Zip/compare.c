@@ -187,7 +187,6 @@ void CompareFolders()
 		if(fileSize0 != fileSize1)
 		{
 			printf("%s %ld\n%s %ld\n", inputFileName,fileSize0, outputFileName, fileSize1);
-			break;
 		}
 		assert(fileSize0 == fileSize1);
 		assert(memcmp(fileData0, fileData1,fileSize0) == 0);
