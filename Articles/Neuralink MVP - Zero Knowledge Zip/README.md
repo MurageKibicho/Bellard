@@ -29,7 +29,8 @@ Total saved  size:     **107084 (bytes)**
 **0.018055 seconds** per file
 
 ## How to Run 
-[YouTube tutorial](https://youtu.be/YeEZfaJ40GU)
+[YouTube tutorial](https://youtu.be/u6zg2sSKIig)
+
 1. Open a terminal and clone the repository.
    
    ```git clone https://github.com/MurageKibicho/Bellard.git```
