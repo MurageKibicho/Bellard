@@ -14,10 +14,11 @@ We have day jobs so we're yet to fully document our work.
 
 These sections are documented:
 1. [Ditching Shannon entropy and building a Custom Entropy measure](https://kibicho.substack.com/p/the-uniformity-measure?r=2at73k)
-2. [Building a Data Compressor using our Custom measure]()
+2. [Building a Data Compressor using our Custom measure](https://open.substack.com/pub/kibicho/p/decreasing-uniformity-neuralink-compression?r=2at73k&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
 3. [Coming soon. Adding polynomial proofs]
 
 ## Results
+Complete discussion [here](https://open.substack.com/pub/kibicho/p/decreasing-uniformity-neuralink-compression?r=2at73k&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
 
 ### File size
 Total size of directory **Data** after Bzip:   **47191022 (bytes)**
@@ -50,7 +51,7 @@ Total saved  size:     **107084 (bytes)**
  The build script
    - Downloads the neuralink dataset
    - Unzips the dataset
-   - Performs our [custom transform]()
+   - Performs our [custom transform](https://open.substack.com/pub/kibicho/p/decreasing-uniformity-neuralink-compression?r=2at73k&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
    - Runs a test to compare files.
  
    
