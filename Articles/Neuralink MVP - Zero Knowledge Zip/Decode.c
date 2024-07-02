@@ -357,7 +357,7 @@ void SkipFile(char *inputFileName, char *outputFileName)
 	int fileNumber = fileno(fp);
 	fr = fopen(outputFileName, "wb");assert(fr != NULL);
 	unsigned char *fileData = mmap(NULL,fileSize, PROT_READ|PROT_WRITE, MAP_PRIVATE, fileNumber, 0);assert(fileData != NULL);
-	fwrite(fileData, fileSize,1,fr);
+	fwrite(fileData, 1, fileSize,fr);
 	assert(munmap(fileData, fileSize) != -1);
 	fclose(fp);fclose(fr);
 }
@@ -383,7 +383,10 @@ int main()
 		
 		if(outputFileName[strlen(outputFileName)-3] != 'o' && outputFileName[strlen(outputFileName)-2] != 'u')
 		{
-			SkipFile(inputFileName, outputFileName);
+			char copyCommand[5000] = {0};
+			snprintf(outputFileName, sizeof(outputFileName), "%s/%s",storageDirectory,toEncodeFileNames[i]);
+			snprintf(copyCommand, sizeof(copyCommand), "cp %s %s",inputFileName, outputFileName);
+			system(copyCommand);
 		}
 		else
 		{

@@ -337,7 +337,7 @@ void SkipFile(char *inputFileName, char *outputFileName)
 	int fileNumber = fileno(fp);
 	fr = fopen(outputFileName, "wb");assert(fr != NULL);
 	unsigned char *fileData = mmap(NULL,fileSize, PROT_READ|PROT_WRITE, MAP_PRIVATE, fileNumber, 0);assert(fileData != NULL);
-	fwrite(fileData, fileSize,1,fr);
+	fwrite(fileData, 1, fileSize,fr);
 	assert(munmap(fileData, fileSize) != -1);
 	fclose(fp);fclose(fr);
 }
@@ -355,31 +355,37 @@ int main()
 	char **toEncodeFileNames = GetFileNamesInDirectory(directoryToEncode, &directoryFileCount);assert(toEncodeFileNames != NULL);
 	assert(directoryFileCount > 0);
 	//PrintFileNames(directoryFileCount, toEncodeFileNames);
-	char *knownFailures[] =
+	const char *knownFailures[8] =
 	{
-		"data/2458a5be-c274-4fd3-82f6-4617caeaeb14.wav.bz2",//#101
-		"data/26b2ca81-4399-4fa9-80e0-7fbb3988d784.wav.bz2",//#111
-		"data/3e2b974a-3e13-48f3-b2f7-40a0c18c838f.wav.bz2",//#173
-		"data/4f7acf44-98d7-4fcc-9bd3-094d9c30d7dd.wav.bz2",//#217
-		"data/685524ad-e854-4fa7-ada7-d8a3861231d1.wav.bz2",//#295
-		"data/b37571bb-bc46-436b-b6f5-f579260d73e0.wav.bz2",//#520
-		"data/e32ab322-a34e-4348-ac9a-005861378f5d.wav.bz2",//#660
-		"data/f1461d76-1c5b-4ceb-998a-c81a74ef0317.wav.bz2" //#697
+		"data/2458a5be-c274-4fd3-82f6-4617caeaeb14.wav.bz2",
+		"data/26b2ca81-4399-4fa9-80e0-7fbb3988d784.wav.bz2",
+		"data/3e2b974a-3e13-48f3-b2f7-40a0c18c838f.wav.bz2",
+		"data/4f7acf44-98d7-4fcc-9bd3-094d9c30d7dd.wav.bz2",
+		"data/685524ad-e854-4fa7-ada7-d8a3861231d1.wav.bz2",
+		"data/b37571bb-bc46-436b-b6f5-f579260d73e0.wav.bz2",
+		"data/e32ab322-a34e-4348-ac9a-005861378f5d.wav.bz2",
+		"data/f1461d76-1c5b-4ceb-998a-c81a74ef0317.wav.bz2" 
 	};
 	size_t totalInputBytes = 0;
 	size_t totalOutputBytes = 0;
+	int skippedIndex = 0;
 	for(int i = 0; i < directoryFileCount; i++)
 	//for(int i = 0; i < 1; i++)
 	{
 		char inputFileName[MAX_FILENAME_LENGTH] = {0};
 		char outputFileName[MAX_FILENAME_LENGTH] = {0};
+		
 		snprintf(inputFileName, sizeof(inputFileName), "%s/%s",directoryToEncode,toEncodeFileNames[i]);
 		start_clock = clock();	
-		if(i == 101 || i == 110 || i == 172 || i == 216 || i == 294 || i == 519 || i == 660 || i == 697)
+		//if(i == 101 || i == 111 || i == 173 || i == 216 || i == 294 || i == 519 || i == 660 || i == 696)
+		if(skippedIndex < 8 && strcmp(inputFileName, knownFailures[skippedIndex]) == 0)
 		{
 			printf("Skipped : %s\n", toEncodeFileNames[i]);
+			char copyCommand[5000] = {0};
 			snprintf(outputFileName, sizeof(outputFileName), "%s/%s",storageDirectory,toEncodeFileNames[i]);
-			SkipFile(inputFileName, outputFileName);
+			snprintf(copyCommand, sizeof(copyCommand), "cp %s %s",inputFileName, outputFileName);
+			system(copyCommand);
+			skippedIndex += 1;
 		}
 		else
 		{

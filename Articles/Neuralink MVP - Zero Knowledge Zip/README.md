@@ -22,8 +22,8 @@ We observe Bzip on individual files compresses best. Our transform works on bzip
 ### File size
 Total size of directory Data after Bzip:   **47191022 (bytes)**
 
-Total size after Bzip + Custom Compress:   **47084092 (bytes)**
-Total saved  size:     **106930 (bytes)**
+Total size after Bzip + Custom Compress:   **47083938 (bytes)**
+Total saved  size:     **107084 (bytes)**
 
 ### Average running time.
 **0.018055 seconds** per file

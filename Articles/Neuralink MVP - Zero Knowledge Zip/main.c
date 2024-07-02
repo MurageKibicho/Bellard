@@ -158,28 +158,35 @@ int main()
 	
 	/*Command to unzip data*/
 	char *unzipDataset= "unzip -q data.zip";
+	
 	/*Command to compile all Programs*/
 	char *compileEncoder = "clear && gcc Encode.c -lm -o Encode.o";
 	char *compileDecoder = "clear && gcc Decode.c -lm -o Decode.o";
+	char *compileCompare = "clear && gcc compare.c -lm -o compare.o";
 	
 	char *runEncoder = "clear && ./Encode.o";
 	char *runDecoder = "clear && ./Decode.o";
+	char *runTest = "clear && ./compare.o";
 	
 	char *originalDirectory = "data";
 	char *newDirectory = "DecodedOutput";
 	
 	
-	system(downloadDataset);
+	//system(downloadDataset);
 	system(unzipDataset);
 	
 	system(compileEncoder);
 	system(compileDecoder);
+	system(compileCompare);
+	
 	EncodeBzip();
 	system(runEncoder);
 	system(runDecoder);
-	DecodeBzip(originalDirectory);
-	
+	DecodeBzip(newDirectory);
+
+
 	//Run tests
 	DecodeBzip(originalDirectory);
+	system(runTest);
 	return 0;
 }

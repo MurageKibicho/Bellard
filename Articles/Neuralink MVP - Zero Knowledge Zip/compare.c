@@ -186,7 +186,7 @@ void CompareFolders()
 		
 		if(fileSize0 != fileSize1)
 		{
-			printf("%s %ld\n%s %ld", inputFileName,fileSize0, outputFileName, fileSize1);
+			printf("%s %ld\n%s %ld\n", inputFileName,fileSize0, outputFileName, fileSize1);
 			break;
 		}
 		assert(fileSize0 == fileSize1);
@@ -195,7 +195,7 @@ void CompareFolders()
 		assert(munmap(fileData1, fileSize1) != -1);
 		fclose(fp);fclose(fr);
 	}
-	printf("Test Passed : Equal bytes\n");
+	printf("\nTest Passed : Equal bytes\n");
 	DestroyFileNames(originalDirectoryFileCount, originalFileNames);
 	DestroyFileNames(newDirectoryFileCount, newFileNames);
 }
