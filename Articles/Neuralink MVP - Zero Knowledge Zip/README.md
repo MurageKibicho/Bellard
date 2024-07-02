@@ -4,7 +4,7 @@ This is our submission for the Neuralink compression challenge.
 
 It has been tested on a linux PC running Ubuntu. 
 
-We assume your Linux system has Bzip pre-installed.
+We assume your Linux system has Bzip and GCC pre-installed.
 
 ## Introduction
 We attempt to showcase an application of Zero Knowledge proofs -  making files smaller in realtime.
@@ -20,5 +20,13 @@ This sections are documented:
 
 
 ## How to Run
+1. Clone the repository.
+   
+   ```git clone https://github.com/MurageKibicho/Bellard.git```
 
+2. Compile the build script
+   ``` gcc main.c -o -lm main.o```
 
+3. Run the build scrip
+   ```./main.o```
+ 
