@@ -2,9 +2,10 @@
 
 This is our submission for the Neuralink compression challenge.
 
-It has been tested on a linux PC running Ubuntu. 
+We assume you have a Linux system with Bzip2 and GCC pre-installed.
 
-We assume your Linux system has Bzip and GCC pre-installed.
+This is not an archiver. It works on individual files.
+We compare the total size of **data** folder and **Output** folder.
 
 ## Introduction
 We attempt to showcase an application of Zero Knowledge proofs -  making files smaller in realtime.
@@ -17,12 +18,11 @@ This sections are documented:
 3. [Coming soon. Adding polynomial proofs]
 
 ## Results
-We observe Bzip on individual files compresses best. Our transform works on bzipped files.
 
 ### File size
-Total size of directory Data after Bzip:   **47191022 (bytes)**
+Total size of directory **Data** after Bzip:   **47191022 (bytes)**
 
-Total size after Bzip + Custom Compress:   **47083938 (bytes)**
+Total size of directory **Output** after Bzip + Custom Compress:   **47083938 (bytes)**
 Total saved  size:     **107084 (bytes)**
 
 ### Average running time.
