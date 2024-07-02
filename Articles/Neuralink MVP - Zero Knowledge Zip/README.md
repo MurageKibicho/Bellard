@@ -21,6 +21,7 @@ These sections are documented:
 Complete discussion [here](https://open.substack.com/pub/kibicho/p/decreasing-uniformity-neuralink-compression?r=2at73k&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
 
 ### File size
+![File size comparison](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8759947-bb8b-4b58-8259-440ad08ef943_2334x1314.png)
 Total size of directory **Data** after Bzip:   **47191022 (bytes)**
 
 Total size of directory **Output** after Bzip + Custom Compress:   **47083938 (bytes)**
