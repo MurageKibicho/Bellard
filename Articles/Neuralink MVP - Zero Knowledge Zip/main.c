@@ -153,7 +153,12 @@ void DecodeBzip(char *directoryToEncode)
 
 int main()
 {
-	/*Function to compile all Programs*/
+	/*Command to download dataset*/
+	char *downloadDataset = "wget https://content.neuralink.com/compression-challenge/data.zip";
+	
+	/*Command to unzip data*/
+	char *unzipDataset= "unzip -q data.zip";
+	/*Command to compile all Programs*/
 	char *compileEncoder = "clear && gcc Encode.c -lm -o Encode.o";
 	char *compileDecoder = "clear && gcc Decode.c -lm -o Decode.o";
 	
@@ -162,15 +167,19 @@ int main()
 	
 	char *originalDirectory = "data";
 	char *newDirectory = "DecodedOutput";
-	//system(compileEncoder);
-	//system(compileDecoder);
+	
+	
+	system(downloadDataset);
+	system(unzipDataset);
+	
+	system(compileEncoder);
+	system(compileDecoder);
 	EncodeBzip();
 	system(runEncoder);
 	system(runDecoder);
 	DecodeBzip(originalDirectory);
-	//Run tests
 	
+	//Run tests
 	DecodeBzip(originalDirectory);
-	//
 	return 0;
 }
