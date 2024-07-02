@@ -12,7 +12,7 @@ We attempt to showcase an application of Zero Knowledge proofs -  making files s
 We have day jobs so we're yet to fully document our work.
 
 
-This sections are documented:
+These sections are documented:
 1. [Ditching Shannon entropy and building a Custom Entropy measure](https://kibicho.substack.com/p/the-uniformity-measure?r=2at73k)
 2. [Building a Data Compressor using our Custom measure]()
 3. [Coming soon. Adding polynomial proofs]
@@ -54,7 +54,7 @@ Total saved  size:     **107084 (bytes)**
 ## Disclaimer
 Our encoder has a failure rate of 10 / 743.
 
-This means 10 in 743s files won't decompress correctly.
+This means 10 in 743 files won't decompress correctly.
 
 We didn't have time to debug these edge cases.
 
