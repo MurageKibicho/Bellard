@@ -43,6 +43,13 @@ Total saved  size:     **107084 (bytes)**
 4. Run the build script
    
    ```./main.o```
+   
+## Disclaimer
+Our encoder has a failure rate of 8 / 743.
+
+This means 8 in 743s files won't decompress correctly.
+
+I didn't have time to debug these edge cases.
 
 ## Further direction
 If we get hired by Neuralink we'll spend more time working on the dataset.
