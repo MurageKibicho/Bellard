@@ -32,13 +32,16 @@ Total saved  size:     **107084 (bytes)**
 1. Open a terminal and clone the repository.
    
    ```git clone https://github.com/MurageKibicho/Bellard.git```
-2. Navigate to the **Neuralink MVP - Zero Knowledge Zip** folder 
+2. Navigate to the **Neuralink MVP - Zero Knowledge Zip** folder
+   
    ```cd "Bellard/Articles/Neuralink MVP - Zero Knowledge Zip" ```
 
-4. Compile the build script
+3. Compile the build script
+   
    ``` gcc main.c -lm -o main.o```
 
-5. Run the build script
+4. Run the build script
+   
    ```./main.o```
 
 ## Further direction
