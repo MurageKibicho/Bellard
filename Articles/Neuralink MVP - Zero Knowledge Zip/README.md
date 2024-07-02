@@ -20,13 +20,21 @@ This sections are documented:
 
 
 ## How to Run
-1. Clone the repository.
+1. Open a terminal and clone the repository.
    
    ```git clone https://github.com/MurageKibicho/Bellard.git```
+2. Navigate to the **Neuralink MVP - Zero Knowledge Zip** folder 
+   ```cd "Bellard/Articles/Neuralink MVP - Zero Knowledge Zip" ```
 
-2. Compile the build script
-   ``` gcc main.c -o -lm main.o```
+4. Compile the build script
+   ``` gcc main.c -lm -o main.o```
 
-3. Run the build scrip
+5. Run the build script
    ```./main.o```
+
+   The build script
+   - Downloads the neuralink dataset
+   - Unzips the dataset
+   - Performs our [custom transform]()
+   - Runs a test to compare files.
  
