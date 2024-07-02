@@ -23,6 +23,7 @@ These sections are documented:
 Total size of directory **Data** after Bzip:   **47191022 (bytes)**
 
 Total size of directory **Output** after Bzip + Custom Compress:   **47083938 (bytes)**
+
 Total saved  size:     **107084 (bytes)**
 
 ### Average running time.
