@@ -31,6 +31,9 @@ Total saved  size:     **107084 (bytes)**
 ### Average running time.
 **0.018055 seconds** per file
 
+Complete discussion [here](https://open.substack.com/pub/kibicho/p/decreasing-uniformity-neuralink-compression?r=2at73k&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+
+
 ## How to Run 
 [YouTube tutorial](https://youtu.be/u6zg2sSKIig)
 
@@ -65,6 +68,7 @@ We didn't have time to debug these edge cases.
 
 ## Further direction
 [Follow us on Twitter](https://x.com/murage_kibicho)
+
 [Take our compression course : Using FFmpeg in C](https://www.udemy.com/course/part-1-video-coding-with-ffmpeg-and-c-in-replit-online-ide/)
 
 
